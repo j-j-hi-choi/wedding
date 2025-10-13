@@ -1,4 +1,34 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+@font-face {
+  font-family: "dahyeon";
+  src: url("./fonts/dahyeon.ttf");
+}
+
+@font-face {
+  font-family: "ryuryu";
+  src: url("./fonts/ryuryu.ttf");
+}
+
+@font-face {
+  font-family: "ryuddung";
+  src: url("./fonts/ryuddung.ttf");
+}
+
+@font-face {
+  font-family: "redio";
+  src: url("./fonts/redio.ttf");
+}
+
+@font-face {
+  font-family: "haru";
+  src: url("./fonts/haru.ttf");
+}
+
 :root {
+  width: 100%;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
