@@ -53,7 +53,6 @@ function Share() {
           window.Kakao.init("f3529789460367258cba36d452853f00");
         }
         setIsKakaoInitialized(true);
-        console.log("카카오 SDK 초기화 완료!");
       }
     };
   }, []);
@@ -61,13 +60,8 @@ function Share() {
   const currentUrl = "https://j-j-hi-choi.github.io/wedding";
 
   const handleShare = () => {
-    if (!window.Kakao || !isKakaoInitialized) {
-      alert("not yet");
-      console.error("카카오 SDK가 아직 준비되지 않았어!");
-      return;
-    }
+    if (!window.Kakao || !isKakaoInitialized) return;
 
-    console.log("kakao");
     const kakao = window.Kakao;
     kakao.Share.sendDefault({
       objectType: "feed",
@@ -80,15 +74,6 @@ function Share() {
           webUrl: currentUrl, // PC에서 공유했을 때 이동할 URL
         },
       },
-      buttons: [
-        {
-          title: "자세히 보기!",
-          link: {
-            mobileWebUrl: currentUrl,
-            webUrl: currentUrl,
-          },
-        },
-      ],
     });
   };
 

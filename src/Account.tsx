@@ -18,9 +18,9 @@ function Account() {
   const groom1: AccountType = { bank: "국민1", number: "123-456-78910" };
   const groom2: AccountType = { bank: "국민2", number: "123-456-78910" };
   const groom3: AccountType = { bank: "국민3", number: "123-456-78910" };
-  const bride1: AccountType = { bank: "국민4", number: "123-456-78910" };
-  const bride2: AccountType = { bank: "국민5", number: "123-456-78910" };
-  const bride3: AccountType = { bank: "국민6", number: "123-456-78910" };
+  const bride1: AccountType = { bank: "대구은행", number: "508-11-983081-2" };
+  const bride2: AccountType = { bank: "대구은행", number: "508-13-467797-1" };
+  const bride3: AccountType = { bank: "농협", number: "356-0441-6831-33" };
 
   return (
     <div className="account-container">
