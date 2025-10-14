@@ -1,6 +1,6 @@
 import MainPhoto from "../public/main-photo.jpg";
 import Ribon from "../public/ribbon.png";
-import Child from "../public/child-3.png";
+import Child from "../public/child.png";
 import Calendar from "../public/calendar.png";
 import Timeline from "../public/timeline.png";
 import CalendarLabel from "../public/label/calendar-label.png";
