@@ -37,8 +37,6 @@ function Share() {
   );
 
   useEffect(() => {
-    const kakaoApiKey = import.meta.env.VITE_KAKAO_JAVASCRIPT_KEY;
-
     // kakao sdk script를 동적으로 로드
     const script = document.createElement("script");
     script.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.8/kakao.min.js";
@@ -52,7 +50,7 @@ function Share() {
     script.onload = () => {
       if (window.Kakao) {
         if (!window.Kakao.isInitialized()) {
-          window.Kakao.init(kakaoApiKey);
+          window.Kakao.init("f3529789460367258cba36d452853f00");
         }
         setIsKakaoInitialized(true);
         console.log("카카오 SDK 초기화 완료!");
