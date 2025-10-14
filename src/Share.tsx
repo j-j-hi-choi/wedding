@@ -57,9 +57,10 @@ function Share() {
     };
   }, []);
 
-  const currentUrl = "https://j-j-hi-choi.github.io/wedding/";
+  const currentUrl = "https://j-j-hi-choi.github.io/wedding";
 
   const handleShare = () => {
+    console.log("kakao");
     if (window.Kakao) {
       const kakao = window.Kakao;
       kakao.Share.sendDefault({
@@ -67,7 +68,7 @@ function Share() {
         content: {
           title: "박호정​ෆ최주희 결혼합니다 -`ღ´- ", // 공유될 때 보이는 제목
           description: "25.12.06 엠스타하우스 모닝스타홀", // 제목 아래 설명
-          imageUrl: `${window.location.origin}/main-photo.jpg`, // 썸네일 이미지
+          imageUrl: "https://j-j-hi-choi.github.io/wedding/main-photo.jpg", // 썸네일 이미지
           link: {
             mobileWebUrl: currentUrl, // 모바일에서 공유했을 때 이동할 URL
             webUrl: currentUrl, // PC에서 공유했을 때 이동할 URL
