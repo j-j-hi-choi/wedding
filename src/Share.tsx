@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useCopyToClipboard } from "./wedding-util";
 
 function Share() {
+  const [isKakaoInitialized, setIsKakaoInitialized] = useState(false);
   const { isCopied, copy } = useCopyToClipboard();
 
   const ShareIcon = () => (
@@ -53,6 +54,8 @@ function Share() {
         if (!window.Kakao.isInitialized()) {
           window.Kakao.init(kakaoApiKey);
         }
+        setIsKakaoInitialized(true);
+        console.log("카카오 SDK 초기화 완료!");
       }
     };
   }, []);
@@ -60,6 +63,12 @@ function Share() {
   const currentUrl = "https://j-j-hi-choi.github.io/wedding";
 
   const handleShare = () => {
+    if (!window.Kakao || !isKakaoInitialized) {
+      alert("not yet");
+      console.error("카카오 SDK가 아직 준비되지 않았어!");
+      return;
+    }
+
     console.log("kakao");
     const kakao = window.Kakao;
     kakao.Share.sendDefault({
@@ -90,6 +99,7 @@ function Share() {
       <button
         className="kakao-share-btn"
         onClick={handleShare}
+        disabled={!isKakaoInitialized}
         onMouseOver={(e) => {
           e.currentTarget.style.transform = "translateY(-2px)";
           e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.08)";
