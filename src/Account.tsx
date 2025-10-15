@@ -15,12 +15,12 @@ function Account() {
 
   const { isCopied, copy } = useCopyToClipboard();
 
-  const groom1: AccountType = { bank: "국민1", number: "123-456-78910" };
-  const groom2: AccountType = { bank: "국민2", number: "123-456-78910" };
-  const groom3: AccountType = { bank: "국민3", number: "123-456-78910" };
-  const bride1: AccountType = { bank: "대구은행", number: "508-11-983081-2" };
-  const bride2: AccountType = { bank: "대구은행", number: "508-13-467797-1" };
-  const bride3: AccountType = { bank: "농협", number: "356-0441-6831-33" };
+  const groom1: AccountType = { bank: "농협", number: "3522257323463" };
+  const groom2: AccountType = { bank: "국민", number: "90470100037167" };
+  const groom3: AccountType = { bank: "국민", number: "72720200253222" };
+  const bride1: AccountType = { bank: "대구은행", number: "508119830812" };
+  const bride2: AccountType = { bank: "대구은행", number: "508134677971" };
+  const bride3: AccountType = { bank: "농협", number: "3560441683133" };
 
   return (
     <div className="account-container">
