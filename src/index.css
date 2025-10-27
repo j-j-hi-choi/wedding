@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "ryuryu";
-  src: url("./fonts/ryuryu.ttf");
+  src: url("/fonts/ryuryu.ttf") format("truetype");
+  font-display: swap;
 }
 
 :root {
